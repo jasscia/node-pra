@@ -6,7 +6,7 @@ function send(thename){
     host:'127.0.0.1',
     port:3000,
     url:'/',
-    method:'GET'
+    method:'POST'
   },function(res){
     res.setEncoding('utf8')
     var body='';
