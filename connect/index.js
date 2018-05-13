@@ -1,4 +1,6 @@
 var connect=require('connect')
 var server=connect.createServer()
-server.use(connect.static(__dirname+'/website'))
-server.listen(3000)
+server.use('/',connect.static(__dirname+'/website'))
+server.use(connect.logger('dev'))
+server()
+server.listen(3000,function(){console.log('listening on: 3000')})
