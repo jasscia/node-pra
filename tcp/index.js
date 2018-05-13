@@ -2,7 +2,6 @@ var net=require('net');
 var count=0;
 var users={};
 var server=net.createServer(function(conn){
-  // console.log('\033[90m new connection!\033[39m');
   conn.setEncoding('utf8')
   var nickname;
   conn.write(
