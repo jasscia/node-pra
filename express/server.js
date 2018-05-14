@@ -1,6 +1,7 @@
 var express=require('express')
 var search=require('./search')
 var app=express.createServer()
+// app.use(express.st)
 app.set('view engine','ejs')
 app.set('ivews',__dirname+'/views')
 app.set('view aptions',{layout:false})
@@ -8,7 +9,7 @@ app.set('view aptions',{layout:false})
 app.get('/',function(req,res){
   res.render('index')
 })
-app.get('.search',function(req,res,next){
+app.get('/search',function(req,res,next){
   search(req.query.q,function(err,tweets){
     if(err){
       return next(err);
